@@ -1,80 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Time tracking dashboard</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./style.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="dashboard-grid">
+        <div class="card card--user">
+          <div class="cu--upper">
+            <figure class="avatar">
+              <img src="./images/image-jeremy.png" alt="Jeremy's portrait" />
+            </figure>
 
-  Report for
-  Jeremy Robson
+            <div class="cu__info">
+              <p class="sm-text">Report for</p>
+              <p class="bg-text">Jeremy Robson</p>
+            </div>
+          </div>
+          <div class="cu--lower">
+            <ul class="list">
+              <li class="list__el md-text">Daily</li>
+              <li class="list__el md-text">Weekly</li>
+              <li class="list__el md-text">Monty</li>
+            </ul>
+          </div>
+        </div>
 
-  Daily
-  Weekly
-  Monthly
+        <div class="card card--stat cs--work">
+          <div class="cs--data">
+            <div class="data__top">
+              <p class="activity md-text">Work</p>
+              <button class="btn">
+                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
 
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
+            <div class="data__bottom">
+              <p class="hours l-text"><span id="work-hrs"></span>hrs</p>
+              <p class="previous sm-text">
+                Last <span id="work-timeframe"></span> -
+                <span id="prev-work-hrs"></span>hours
+              </p>
+            </div>
+          </div>
+        </div>
 
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
+        <div class="card card--stat cs--play">
+          <div class="cs--data">
+            <div class="data__top">
+              <p class="activity md-text">Play</p>
+              <button class="btn">
+                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
 
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
+            <div class="data__bottom">
+              <p class="hours l-text"><span id="play-hrs"></span>hrs</p>
+              <p class="previous sm-text">
+                Last <span id="play-timeframe"></span> -
+                <span id="prev-play-hrs"></span>hours
+              </p>
+            </div>
+          </div>
+        </div>
 
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
+        <div class="card card--stat cs--study">
+          <div class="cs--data">
+            <div class="data__top">
+              <p class="activity md-text">Study</p>
+              <button class="btn">
+                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
 
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
+            <div class="data__bottom">
+              <p class="hours l-text"><span id="study-hrs"></span>hrs</p>
+              <p class="previous sm-text">
+                Last <span id="study-timeframe"></span> -
+                <span id="prev-study-hrs"></span>hours
+              </p>
+            </div>
+          </div>
+        </div>
 
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
+        <div class="card card--stat cs--exercise">
+          <div class="cs--data">
+            <div class="data__top">
+              <p class="activity md-text">Exercise</p>
+              <button class="btn">
+                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+            <div class="data__bottom">
+              <p class="hours l-text"><span id="exercise-hrs"></span>hrs</p>
+              <p class="previous sm-text">
+                Last <span id="exercise-timeframe"></span> -
+                <span id="prev-exercise-hrs"></span>hours
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card--stat cs--social">
+          <div class="cs--data">
+            <div class="data__top">
+              <p class="activity md-text">Social</p>
+              <button class="btn">
+                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="data__bottom">
+              <p class="hours l-text"><span id="social-hrs"></span>hrs</p>
+              <p class="previous sm-text">
+                Last <span id="social-timeframe"></span> -
+                <span id="prev-social-hrs"></span>hours
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card--stat cs--self-care">
+          <div class="cs--data">
+            <div class="data__top">
+              <p class="activity md-text">Self Care</p>
+              <button class="btn">
+                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="data__bottom">
+              <p class="hours l-text"><span id="selfcare-hrs"></span>hrs</p>
+              <p class="previous sm-text">
+                Last <span id="selfcare-timeframe"></span> -
+                <span id="prev-selfcare-hrs"></span>hours
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p class="attribution">
+          Challenge by
+          <a
+            href="https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw"
+            target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="https://github.com/xaviguasch/">Xavi Guasch</a>.
+        </p>
+      </footer>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
 </html>
