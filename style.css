@@ -91,6 +91,73 @@ ul {
 /* Typography */
 /* ================== */
 
+.xs-text {
+  font-size: var(--fs-10);
+}
+
+.sm-text {
+  font-size: var(--fs-15);
+}
+
+.md-text {
+  font-size: var(--fs-18);
+}
+
+.lg-text {
+  font-size: var(--fs-24);
+}
+
+.xl-text {
+  font-size: var(--fs-32);
+}
+
+.info__key {
+  color: var(--clr-pale-blue);
+}
+
+.info__value {
+  font-weight: var(--fw-light);
+}
+
+.list__el {
+  color: var(--clr-desaturated-blue);
+}
+
+.list__el.active {
+  color: var(--clr-white);
+}
+
+.activity {
+  font-weight: var(--fw-medium);
+}
+
+.hours {
+  font-weight: var(--fw-light);
+}
+
+.previous {
+  color: var(--clr-pale-blue);
+}
+
+/* ================== */
+/* Links */
+/* ================== */
+
+/* ================== */
+/* Buttons & inputs */
+/* ================== */
+
+/* ================== */
+/* Utility styles */
+/* ================== */
+
+.wrapper {
+}
+
+/* ================== */
+/* SECTIONS */
+/* ================== */
+
 /* ==================================== */
 /* ==================================== */
 /* ==================================== */
@@ -128,9 +195,8 @@ ul {
 /* ==================================== */
 
 .attribution {
-  font-size: 11px;
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--clr-orange);
 }
