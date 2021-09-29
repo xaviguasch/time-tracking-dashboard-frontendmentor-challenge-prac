@@ -348,7 +348,7 @@ ul {
     column-gap: 1.875em;
     row-gap: 1.875em;
 
-    max-width: unset;
+    max-width: 720px;
   }
 
   .card--user {
