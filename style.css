@@ -276,29 +276,29 @@ ul {
 }
 
 .cs--work {
-  background: url('./images/icon-work.svg') no-repeat top -10px right 17px;
+  background: url('./images/icon-work.svg') no-repeat top -6px right 17px;
   background-color: var(--clr-orange);
 }
 
 .cs--play {
-  background: url('./images/icon-play.svg') no-repeat top -10px right 17px;
+  background: url('./images/icon-play.svg') no-repeat top -6px right 17px;
   background-color: var(--clr-soft-blue);
 }
 
 .cs--study {
-  background: url('./images/icon-study.svg') no-repeat top -10px right 17px;
+  background: url('./images/icon-study.svg') no-repeat top -6px right 17px;
   background-color: var(--clr-light-red);
 }
 .cs--exercise {
-  background: url('./images/icon-exercise.svg') no-repeat top -10px right 17px;
+  background: url('./images/icon-exercise.svg') no-repeat top -6px right 17px;
   background-color: var(--clr-lime-green);
 }
 .cs--social {
-  background: url('./images/icon-social.svg') no-repeat top -10px right 17px;
+  background: url('./images/icon-social.svg') no-repeat top -6px right 17px;
   background-color: var(--clr-violet);
 }
 .cs--self-care {
-  background: url('./images/icon-self-care.svg') no-repeat top -10px right 17px;
+  background: url('./images/icon-self-care.svg') no-repeat top -6px right 17px;
   background-color: var(--clr-soft-orange);
 }
 
@@ -386,5 +386,13 @@ ul {
 
   .cs__data {
     height: 199px;
+
+    padding: 1.8125em 1.875em;
+  }
+
+  .data__bottom {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 }
