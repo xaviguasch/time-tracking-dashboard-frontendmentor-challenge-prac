@@ -60,6 +60,8 @@
 
   --clr-very-dark-blue: hsl(226, 43%, 10%);
   --clr-dark-blue: hsl(235, 46%, 20%);
+  --clr-hover-dark-blue: hsla(236, 41%, 34%, 1);
+
   --clr-desaturated-blue: hsl(235, 45%, 61%);
   --clr-pale-blue: hsl(236, 100%, 87%);
 
@@ -230,6 +232,13 @@ ul {
   position: relative;
 
   overflow: hidden;
+
+  cursor: pointer;
+}
+
+.card--stat:hover .cs__data,
+.card--stat:focus .cs__data {
+  background-color: var(--clr-hover-dark-blue);
 }
 
 .cs__data {

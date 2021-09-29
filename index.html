@@ -27,19 +27,19 @@
           <div class="cu--lower">
             <ul class="list">
               <li class="list__el md-text">
-                <button class="btn btn--option">Daily</button>
+                <button id="daily-btn" class="btn btn--option">Daily</button>
               </li>
               <li class="list__el md-text">
-                <button class="btn btn--option">Weekly</button>
+                <button id="weekly-btn" class="btn btn--option">Weekly</button>
               </li>
               <li class="list__el md-text">
-                <button class="btn btn--option">Montly</button>
+                <button id="monthly-btn" class="btn btn--option">Monthly</button>
               </li>
             </ul>
           </div>
         </div>
 
-        <div class="card card--stat cs--work">
+        <div id="work-card" class="card card--stat cs--work">
           <div class="cs__data">
             <div class="data__top">
               <p class="activity md-text">Work</p>
@@ -55,16 +55,16 @@
             </div>
 
             <div class="data__bottom">
-              <p class="hours xl-text">40<span id="work-hrs"></span>hrs</p>
+              <p class="hours xl-text"><span class="hrs" id="work-hrs"></span>hrs</p>
               <p class="previous sm-text">
-                Last <span id="work-timeframe"></span> -
-                <span id="prev-work-hrs"></span>hours
+                Last <span class="timeframe" id="work-timeframe"></span> -
+                <span class="prev-hrs" id="work-prev-hrs"></span>hours
               </p>
             </div>
           </div>
         </div>
 
-        <div class="card card--stat cs--play">
+        <div id="play-card" class="card card--stat cs--play">
           <div class="cs__data">
             <div class="data__top">
               <p class="activity md-text">Play</p>
@@ -80,16 +80,16 @@
             </div>
 
             <div class="data__bottom">
-              <p class="hours xl-text"><span id="play-hrs"></span>hrs</p>
+              <p class="hours xl-text"><span class="hrs" id="play-hrs"></span>hrs</p>
               <p class="previous sm-text">
-                Last <span id="play-timeframe"></span> -
-                <span id="prev-play-hrs"></span>hours
+                Last <span class="timeframe" id="play-timeframe"></span> -
+                <span class="prev-hrs" id="play-prev-hrs"></span>hours
               </p>
             </div>
           </div>
         </div>
 
-        <div class="card card--stat cs--study">
+        <div id="study-card" class="card card--stat cs--study">
           <div class="cs__data">
             <div class="data__top">
               <p class="activity md-text">Study</p>
@@ -105,16 +105,16 @@
             </div>
 
             <div class="data__bottom">
-              <p class="hours xl-text"><span id="study-hrs"></span>hrs</p>
+              <p class="hours xl-text"><span class="hrs" id="study-hrs"></span>hrs</p>
               <p class="previous sm-text">
-                Last <span id="study-timeframe"></span> -
-                <span id="prev-study-hrs"></span>hours
+                Last <span class="timeframe" id="study-timeframe"></span> -
+                <span class="prev-hrs" id="study-prev-hrs"></span>hours
               </p>
             </div>
           </div>
         </div>
 
-        <div class="card card--stat cs--exercise">
+        <div id="exercise-card" class="card card--stat cs--exercise">
           <div class="cs__data">
             <div class="data__top">
               <p class="activity md-text">Exercise</p>
@@ -130,16 +130,16 @@
             </div>
 
             <div class="data__bottom">
-              <p class="hours xl-text"><span id="exercise-hrs"></span>hrs</p>
+              <p class="hours xl-text"><span class="hrs" id="exercise-hrs"></span>hrs</p>
               <p class="previous sm-text">
-                Last <span id="exercise-timeframe"></span> -
-                <span id="prev-exercise-hrs">30</span>hours
+                Last <span class="timeframe" id="exercise-timeframe"></span> -
+                <span class="prev-hrs" id="exercise-prev-hrs">30</span>hours
               </p>
             </div>
           </div>
         </div>
 
-        <div class="card card--stat cs--social">
+        <div id="social-card" class="card card--stat cs--social">
           <div class="cs__data">
             <div class="data__top">
               <p class="activity md-text">Social</p>
@@ -155,16 +155,16 @@
             </div>
 
             <div class="data__bottom">
-              <p class="hours xl-text"><span id="social-hrs"></span>hrs</p>
+              <p class="hours xl-text"><span class="hrs" id="social-hrs"></span>hrs</p>
               <p class="previous sm-text">
-                Last <span id="social-timeframe"></span> -
-                <span id="prev-social-hrs"></span>hours
+                Last <span class="timeframe" id="social-timeframe"></span> -
+                <span class="prev-hrs" id="social-prev-hrs"></span>hours
               </p>
             </div>
           </div>
         </div>
 
-        <div class="card card--stat cs--self-care">
+        <div id="self-care-card" class="card card--stat cs--self-care">
           <div class="cs__data">
             <div class="data__top">
               <p class="activity md-text">Self Care</p>
@@ -180,10 +180,10 @@
             </div>
 
             <div class="data__bottom">
-              <p class="hours xl-text"><span id="selfcare-hrs"></span>hrs</p>
+              <p class="hours xl-text"><span class="hrs" id="selfcare-hrs"></span>hrs</p>
               <p class="previous sm-text">
-                Last <span id="selfcare-timeframe"></span> -
-                <span id="prev-selfcare-hrs"></span>hours
+                Last <span class="timeframe" id="selfcare-timeframe"></span> -
+                <span class="prev-hrs" id="selfcare-prev-hrs"></span>hours
               </p>
             </div>
           </div>
