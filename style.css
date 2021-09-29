@@ -331,17 +331,60 @@ ul {
 
   /* UTILITY STYLES */
   .wrapper {
-    padding: 7.5em 2.75em;
+    padding: 7.5em 7em;
   }
 
   /* SECTIONS */
   /* Main grid */
   .dashboard-grid {
-    /* display: grid;
-    grid-template-columns: 1fr;
+    grid-template-areas:
+      'user stat-1'
+      'user stat-2'
+      'stat-3 stat-4'
+      'stat-5 stat-6';
+
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    row-gap: 1.5em; */
+    column-gap: 1.875em;
+    row-gap: 1.875em;
 
     max-width: unset;
+  }
+
+  .card--user {
+    grid-area: user;
+  }
+
+  .cu--upper {
+    padding: 2.125em 2em 5em;
+
+    flex-direction: column;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2.6875em;
+  }
+
+  .info__value {
+    line-height: 1.25;
+  }
+
+  .cu--lower {
+    padding: 1.5em 2em;
+  }
+
+  .list {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5em;
+  }
+
+  .card--stat {
+    height: 244px;
+  }
+
+  .cs__data {
+    height: 199px;
   }
 }
