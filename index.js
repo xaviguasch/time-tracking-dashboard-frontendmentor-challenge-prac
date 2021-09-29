@@ -39,8 +39,6 @@ const populateCard = (title, hours, type) => {
 }
 
 const fetchData = (type) => {
-  console.log(type)
-
   let mode = ''
 
   if (type === 'daily-btn') mode = 'daily'
@@ -59,6 +57,9 @@ const fetchData = (type) => {
 
 btns.forEach((btn) =>
   btn.addEventListener('click', (e) => {
+    btns.forEach((btn) => btn.classList.remove('active'))
+    btn.classList.add('active')
+
     fetchData(e.target.id)
   })
 )
